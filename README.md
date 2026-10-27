@@ -67,3 +67,14 @@ Proyecto RAUVIAWEB · experiencia digital desarrollada por [RAUVIA Consulting](h
 La sección **Mi trayectoria** ahora muestra cinco experiencias en una sola línea temporal en escritorio (Marsh McLennan, Casa Cruz, Grand Velas Los Cabos, Lumina y Cire Equity — Park West), como en el mockup validado. Incluye indicadores circulares, líneas divisorias, fecha, espacio de identidad de empresa, puesto, ciudad (cuando está confirmada), resumen y etiqueta inferior alineada. En pantallas intermedias se distribuye en tres o dos columnas y en móvil cambia a una cronología vertical.
 
 **Identidad de empresas:** Marsh McLennan utiliza una imagen vectorial referenciada desde Wikimedia Commons, por lo que su carga requiere conexión y debe comprobarse antes de publicar. Los nombres y símbolos de Casa Cruz, Grand Velas, Lumina y Park West usan tratamientos editoriales vectoriales/ tipográficos de referencia, no se presentan como archivos maestros de identidad oficial; sustituirlos por logos aprobados por los titulares cuando estén disponibles. Las representaciones se usan únicamente para identificar puestos anteriores, sin insinuar patrocinio ni afiliación de las empresas con la página.
+
+
+## Animaciones SVG — lenguaje visual de la transición hacia producto
+
+- **Ilustración de cabecera:** animación dentro del propio `assets/monica-garcia-ilustracion-hero.svg`, sin JavaScript ni librerías externas. Los enlaces entre nodos sugieren colaboración entre áreas, las tarjetas muestran seguimiento operativo y la gráfica representa medición y mejora continua. La figura profesional se mantiene estable para evitar movimiento distractor.
+- **Diagrama Clientes → Procesos → Producto:** SVG inline en `index.html`, con órbitas y rutas de conexión, secuencia de tres etiquetas y un indicador que recorre la trayectoria cuando el navegador soporta `offset-path`. Sin soporte, las líneas y etiquetas se mantienen legibles.
+- **Visibilidad:** `app.js` usa `IntersectionObserver` para iniciar y suspender el movimiento del diagrama al entrar o salir del viewport.
+- **Accesibilidad:** el control **Pausar animaciones / Reanudar animaciones** detiene ambas composiciones. El SVG de cabecera cambia al archivo `assets/monica-garcia-ilustracion-hero-estatica.svg`; si el sistema declara `prefers-reduced-motion: reduce`, se usa automáticamente la versión estática y no se ejecuta movimiento ornamental.
+- **Rendimiento:** gráficos vectoriales y CSS, sin animación sobre tamaño de layout, sin paquetes nuevos y sin llamadas de red o telemetría adicionales. El botón no altera otros enlaces ni funcionalidades.
+
+**Comprobación recomendada:** probar entrada y salida de sección, reproducción y pausa, cambio de preferencia del sistema, vista de 360 px y navegadores Chrome, Safari y Firefox. El contenido permanece visible sin ejecutar JavaScript.
