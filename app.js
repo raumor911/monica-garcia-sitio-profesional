@@ -46,6 +46,51 @@
     });
     window.addEventListener("resize", () => { if (window.innerWidth > 980) closeMenu(); });
   }
+  // La secuencia se activa solo cuando entra al viewport; fuera de pantalla queda en pausa.
+  const motionSections = [...document.querySelectorAll("[data-animate-in-view]")];
+  if ("IntersectionObserver" in window) {
+    const motionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-visible", entry.isIntersecting);
+      });
+    }, { threshold: 0.12 });
+    motionSections.forEach((section) => motionObserver.observe(section));
+  } else {
+    motionSections.forEach((section) => section.classList.add("is-visible"));
+  }
+
+  // Control accesible para detener ambas ilustraciones; la imagen animada
+  // se sustituye por su SVG estático porque está cargada como <img>.
+  const illustration = document.getElementById("hero-illustration");
+  const motionToggle = document.querySelector(".motion-toggle");
+  const motionLabel = motionToggle?.querySelector(".motion-toggle-label");
+  const motionIcon = motionToggle?.querySelector(".motion-toggle-icon");
+  const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+  let userPaused = false;
+
+  function updateMotion() {
+    const systemPaused = reducedMotion?.matches ?? false;
+    const paused = userPaused || systemPaused;
+    document.documentElement.classList.toggle("motion-paused", paused);
+    if (illustration) {
+      const src = paused ? illustration.dataset.staticSrc : illustration.dataset.motionSrc;
+      if (src && illustration.getAttribute("src") !== src) illustration.setAttribute("src", src);
+    }
+    if (motionToggle) {
+      motionToggle.hidden = systemPaused;
+      motionToggle.setAttribute("aria-pressed", String(userPaused));
+    }
+    if (motionLabel) motionLabel.textContent = userPaused ? "Reanudar animaciones" : "Pausar animaciones";
+    if (motionIcon) motionIcon.textContent = userPaused ? "▶" : "Ⅱ";
+  }
+
+  motionToggle?.addEventListener("click", () => {
+    userPaused = !userPaused;
+    updateMotion();
+  });
+  reducedMotion?.addEventListener?.("change", updateMotion);
+  updateMotion();
+
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 })();
