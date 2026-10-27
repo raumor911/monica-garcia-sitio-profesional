@@ -44,7 +44,7 @@
     document.addEventListener("click", (event) => {
       if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
     });
-    window.addEventListener("resize", () => { if (window.innerWidth > 800) closeMenu(); });
+    window.addEventListener("resize", () => { if (window.innerWidth > 980) closeMenu(); });
   }
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
