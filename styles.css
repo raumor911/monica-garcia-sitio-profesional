@@ -189,7 +189,7 @@ p{color:var(--body)}
   .project-impact>div{border:0;border-right:1px solid #d8ddd5;padding:2px 18px 2px 0}
   .project-impact>div:last-child{border:0}
 }
-@media(max-width:800px){
+@media(max-width:980px){
   html{scroll-padding-top:74px}
   .section{padding-block:70px}
   .menu-toggle{display:flex;z-index:60;flex:0 0 44px}
