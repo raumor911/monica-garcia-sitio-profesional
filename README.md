@@ -60,3 +60,10 @@ Color principal `#15372e`, acento `#8f263e`, fondos `#f7f4ef`. La composición s
 ---
 
 Proyecto RAUVIAWEB · experiencia digital desarrollada por [RAUVIA Consulting](https://rauvia.com.mx/).
+
+
+## Actualización de trayectoria — referencia editorial
+
+La sección **Mi trayectoria** ahora muestra cinco experiencias en una sola línea temporal en escritorio (Marsh McLennan, Casa Cruz, Grand Velas Los Cabos, Lumina y Cire Equity — Park West), como en el mockup validado. Incluye indicadores circulares, líneas divisorias, fecha, espacio de identidad de empresa, puesto, ciudad (cuando está confirmada), resumen y etiqueta inferior alineada. En pantallas intermedias se distribuye en tres o dos columnas y en móvil cambia a una cronología vertical.
+
+**Identidad de empresas:** Marsh McLennan utiliza una imagen vectorial referenciada desde Wikimedia Commons, por lo que su carga requiere conexión y debe comprobarse antes de publicar. Los nombres y símbolos de Casa Cruz, Grand Velas, Lumina y Park West usan tratamientos editoriales vectoriales/ tipográficos de referencia, no se presentan como archivos maestros de identidad oficial; sustituirlos por logos aprobados por los titulares cuando estén disponibles. Las representaciones se usan únicamente para identificar puestos anteriores, sin insinuar patrocinio ni afiliación de las empresas con la página.
