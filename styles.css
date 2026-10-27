@@ -274,3 +274,75 @@ p{color:var(--body)}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
+
+/* Timeline v2 — five aligned brand columns, matching the approved editorial mockup. */
+.journey-section{background:#fffefa;padding-top:80px;padding-bottom:79px}
+.journey-container{width:min(1390px,calc(100% - 70px));max-width:none}
+.journey-heading{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7%;align-items:center;margin-bottom:43px}
+.journey-heading h2{font-size:clamp(2.35rem,3.3vw,3.35rem);line-height:1.07;letter-spacing:-.045em;color:#152d26;max-width:none;margin:0;font-weight:600}
+.journey-heading h2 em{font-style:normal;color:inherit}
+.journey-heading .eyebrow{font-size:.72rem;letter-spacing:.23em;margin:0 0 8px}
+.journey-heading>p{max-width:510px;margin:13px 0 0;color:#535d58;font-size:.95rem;line-height:1.64}
+.journey-section .timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid #d8d8ce;overflow:visible}
+.journey-section .career-card{position:relative;display:flex;flex-direction:column;min-height:338px;min-width:0;border-left:1px solid #e3e1d9;border-right:0;padding:26px clamp(12px,1.45vw,23px) 3px}
+.journey-section .career-card:last-child{border-right:1px solid #e3e1d9}
+.journey-section .timeline-dot{position:absolute;top:-5.8px;left:-5.5px;width:10px;height:10px;border-radius:50%;background:#315c4f;z-index:2}
+.journey-section .career-card time,.journey-section .career-period{display:block;color:#67736c;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.78rem;line-height:1.35;margin-bottom:18px;min-height:18px;font-variant-numeric:tabular-nums}
+.journey-section .career-logo{height:51px;min-height:51px;display:flex;align-items:center;justify-content:flex-start;gap:9px;overflow:hidden;margin-bottom:10px}
+.journey-section .career-logo-marsh img{width:100%;max-width:235px;height:41px;object-fit:contain;object-position:left center}
+.journey-section .career-logo-casa svg{flex:0 0 28px;width:28px;height:36px}
+.journey-section .career-logo-casa span{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.16rem,1.8vw,1.72rem);font-weight:600;letter-spacing:-.045em;white-space:nowrap;color:#1e3029}
+.journey-section .career-logo-velas{gap:5px}
+.journey-section .career-logo-velas svg{flex:0 0 37px;width:37px;height:37px}
+.journey-section .grand-wordmark{display:flex;flex-direction:column;font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;font-size:clamp(.92rem,1.5vw,1.35rem);line-height:1.02;font-weight:600;letter-spacing:.06em;color:#2c2926;white-space:nowrap}
+.journey-section .grand-wordmark small{font:600 .48em/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.2em;margin-top:2px}
+.journey-section .career-logo-lumina span{font:400 clamp(1.55rem,2.1vw,2.15rem)/1.1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.055em;color:#1f2b2d;white-space:nowrap}
+.journey-section .career-logo-parkwest span{font:450 clamp(1.35rem,1.9vw,1.8rem)/1.1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.002em;color:#111;white-space:nowrap}
+.journey-section .career-card h3{font:700 .85rem/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.015em;color:#1a2d27;margin:0 0 0;overflow-wrap:normal}
+.journey-section .career-location{font-size:.82rem;line-height:1.45;color:#6b7470;margin:1px 0 16px}
+.journey-section .career-description{font-size:.835rem;line-height:1.6;color:#56615c;margin:0 0 20px;overflow-wrap:break-word;hyphens:auto}
+.journey-section .skill-tag{display:flex;align-items:center;min-height:39px;border-radius:7px;background:#edf0e9;color:#345648;font:600 .73rem/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;padding:9px 12px;margin-top:auto}
+.journey-section .journey-note{margin-top:17px;font-size:.76rem;max-width:910px;line-height:1.6}
+@media(min-width:1400px){
+  .journey-section .career-card{padding-left:24px;padding-right:24px}
+  .journey-section .career-card h3{font-size:.91rem}
+  .journey-section .career-description{font-size:.9rem}
+  .journey-section .skill-tag{font-size:.78rem}
+}
+@media(max-width:1110px){
+  .journey-container{width:calc(100% - 46px)}
+  .journey-section .timeline{grid-template-columns:repeat(3,minmax(0,1fr));border-top:0;row-gap:22px}
+  .journey-section .career-card{border-top:1px solid #d8d8ce;min-height:300px;padding:26px 20px 4px}
+  .journey-section .career-card:nth-child(3){border-right:1px solid #e3e1d9}
+  .journey-section .career-card:nth-child(4){border-right:0}
+  .journey-section .career-card:last-child{border-right:1px solid #e3e1d9}
+  .journey-section .career-logo-casa span{font-size:1.6rem}
+  .journey-section .grand-wordmark{font-size:1.24rem}
+  .journey-section .career-logo-parkwest span{font-size:1.8rem}
+}
+@media(max-width:800px){
+  .journey-section{padding-block:66px}
+  .journey-heading{grid-template-columns:1fr;gap:12px;margin-bottom:33px}
+  .journey-heading h2{font-size:clamp(2.2rem,6vw,3.1rem)}
+  .journey-heading>p{max-width:680px;margin:0}
+  .journey-section .timeline{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}
+  .journey-section .career-card{min-height:315px}
+  .journey-section .career-card:nth-child(2n){border-right:1px solid #e3e1d9}
+  .journey-section .career-card:nth-child(3){border-right:0}
+  .journey-section .career-card:nth-child(4){border-right:1px solid #e3e1d9}
+  .journey-section .career-card:last-child{border-right:0}
+}
+@media(max-width:560px){
+  .journey-container{width:calc(100% - 42px)}
+  .journey-section .timeline{display:flex;flex-direction:column;gap:0;border-top:0}
+  .journey-section .career-card,.journey-section .career-card:nth-child(2n),.journey-section .career-card:nth-child(4),.journey-section .career-card:last-child{border-top:0;border-left:1px solid #dfe2da;border-right:0;min-height:0;padding:0 8px 27px 22px}
+  .journey-section .timeline-dot{top:9px;left:-5.5px}
+  .journey-section .career-card time,.journey-section .career-period{margin-bottom:11px}
+  .journey-section .career-logo{height:49px;min-height:49px;margin-bottom:7px}
+  .journey-section .career-card h3{font-size:.92rem}
+  .journey-section .career-location{margin-bottom:11px}
+  .journey-section .career-description{font-size:.89rem;margin-bottom:14px}
+  .journey-section .skill-tag{align-self:flex-start;min-height:34px;margin-top:0}
+  .journey-section .career-card:last-child{padding-bottom:0}
+  .journey-heading h2{font-size:clamp(2.25rem,8.5vw,2.8rem)}
+}
