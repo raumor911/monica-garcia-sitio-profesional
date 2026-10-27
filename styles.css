@@ -63,14 +63,16 @@ p{color:var(--body)}
 .visual-note{position:absolute;z-index:2;right:0;top:8%;font-family:Georgia,serif;font-style:italic;transform:rotate(-10deg);font-size:clamp(1.13rem,1.9vw,1.8rem);line-height:1.15;color:var(--pine)}
 .visual-note span{display:block}
 .visual-caption{position:absolute;bottom:6%;left:8%;max-width:240px;font-size:.72rem;line-height:1.4;color:#516158;background:rgba(255,254,250,.85);padding:9px 12px;border-radius:9px}
-.metrics{background:#fff}
-.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--cream);border:1px solid #f1ede6;border-radius:18px;padding:24px 20px}
-.metric{display:flex;align-items:center;gap:14px;padding:7px 24px;border-right:1px solid #dcded6;min-width:0}
-.metric:last-child{border:0}
-.metric-symbol{display:grid;place-items:center;flex:0 0 50px;width:50px;height:50px;border-radius:50%;background:#e4ebe3;color:var(--pine);font-size:1.5rem;font-family:Georgia,serif}
-.metric>div{display:flex;flex-direction:column;line-height:1.3;min-width:0}
-.metric strong{font-size:clamp(2rem,2.8vw,2.8rem);font-weight:500;line-height:1.1;white-space:nowrap}
-.metric span:last-child{font-size:.78rem;line-height:1.4;color:#4c5a53}
+/* Portfolio metrics: proportion, separators and pictograms from approved mockup. */
+.metrics{background:#fff;padding-block:12px 14px}
+.metrics .metric-grid{width:min(1390px,calc(100% - 32px));max-width:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;background:#f8f7f4;border:0;border-radius:11px;padding:16px 0}
+.metrics .metric{display:flex;align-items:center;gap:13px;min-height:78px;min-width:0;padding:2px clamp(15px,2.25vw,27px);border-right:1px solid #dedfd8}
+.metrics .metric:last-child{border-right:0}
+.metrics .metric-symbol{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:#e9eee8;color:#244337}
+.metrics .metric-symbol svg{display:block;width:25px;height:25px;flex:0 0 auto}
+.metrics .metric-copy{display:flex;flex-direction:column;gap:1px;min-width:0;line-height:1.18}
+.metrics .metric-copy strong{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,2.55vw,2.2rem);font-weight:500;letter-spacing:-.052em;line-height:1.04;color:#18352d;white-space:nowrap}
+.metrics .metric-copy span{font-size:.75rem;line-height:1.34;color:#505d55;text-wrap:pretty}
 .editorial-grid{display:grid;grid-template-columns:1fr .95fr;gap:12%;align-items:start}
 .editorial-grid h2{max-width:630px}
 .intro-body{font-size:1.06rem;line-height:1.9}
@@ -180,8 +182,8 @@ p{color:var(--body)}
   .primary-nav{gap:12px}
   .primary-nav>a{font-size:.72rem}
   .primary-nav>.nav-contact{padding:9px 12px}
-  .metric{padding-inline:13px;gap:10px}
-  .metric-symbol{width:42px;height:42px;flex-basis:42px}
+  .metrics .metric{padding-inline:clamp(12px,2.2vw,24px);gap:12px}
+  .metrics .metric-symbol{width:44px;height:44px;flex-basis:44px}
   .value-card{padding:26px 18px}
   .project-grid{grid-template-columns:1fr 1.1fr}
   .project-impact{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
@@ -206,10 +208,10 @@ p{color:var(--body)}
   h1{font-size:clamp(3.7rem,11vw,6rem)}
   .hero-visual{max-width:660px;margin:auto}
   .visual-note{right:5%}
-  .metric-grid{grid-template-columns:repeat(2,1fr)}
-  .metric{padding:18px 15px}
-  .metric:nth-child(2){border:0}
-  .metric:nth-child(-n+2){border-bottom:1px solid #dcded6}
+  .metrics .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:8px 0}
+  .metrics .metric{padding:15px 20px;min-height:88px}
+  .metrics .metric:nth-child(2){border-right:0}
+  .metrics .metric:nth-child(-n+2){border-bottom:1px solid #dedfd8}
   .section-heading{margin-bottom:28px}
   .value-grid{grid-template-columns:repeat(2,1fr)}
   .timeline{grid-template-columns:repeat(2,1fr);gap:25px 0}
@@ -241,11 +243,11 @@ p{color:var(--body)}
   .hero-actions .button{width:100%}
   .visual-note{font-size:1.02rem;right:1%;top:8%}
   .visual-caption{left:5%;bottom:3%;font-size:.65rem;max-width:175px}
-  .metric-grid{padding:6px;border-radius:12px}
-  .metric{padding:15px 8px;gap:8px;align-items:flex-start}
-  .metric-symbol{width:35px;height:35px;flex-basis:35px;font-size:1.2rem}
-  .metric strong{font-size:1.8rem}
-  .metric span:last-child{font-size:.7rem}
+  .metrics .metric-grid{padding:5px 0;border-radius:10px}
+  .metrics .metric{padding:15px 10px;gap:9px;align-items:center;min-height:91px}
+  .metrics .metric-symbol{width:38px;height:38px;flex-basis:38px}
+  .metrics .metric-copy strong{font-size:1.8rem}
+  .metrics .metric-copy span{font-size:.7rem}
   .value-grid,.timeline,.complementary,.skills-grid,.project-impact{grid-template-columns:1fr}
   .value-card{min-height:auto;padding:24px}
   .career-card,.career-card:nth-child(2){border-right:0;min-height:0;padding:30px 21px}
