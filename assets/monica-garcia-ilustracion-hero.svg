@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" role="img" aria-labelledby="t d">
+<title id="t">Ilustración conceptual: personas, procesos y soluciones</title>
+<desc id="d">Ilustración vectorial editorial, sin fotografía ni rasgos de identidad, de una profesional coordinando información y equipos a través de una computadora.</desc>
+<defs>
+  <linearGradient id="cream" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#E6DDCD"/><stop offset="1" stop-color="#F6F2EB"/></linearGradient>
+  <linearGradient id="green" x1="0" x2="0.8" y1="0" y2="1"><stop stop-color="#204B3D"/><stop offset="1" stop-color="#102E27"/></linearGradient>
+  <filter id="shade" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0A211A" flood-opacity="0.10"/></filter>
+</defs>
+<path d="M150 690C95 605 78 510 115 392C160 248 303 135 480 116C658 97 814 183 878 328C936 461 899 620 825 690Z" fill="url(#cream)"/>
+<circle cx="346" cy="168" r="100" fill="#922C43"/>
+<path d="M125 692H907" stroke="#12382D" stroke-width="8" stroke-linecap="round"/>
+<path d="M134 308C162 260 218 232 285 229" stroke="#B5AA99" stroke-width="3" fill="none" stroke-dasharray="9 13"/>
+<circle cx="133" cy="306" r="13" fill="#922C43"/>
+<circle cx="285" cy="229" r="10" fill="#12382D"/>
+<path d="M696 187C751 153 804 157 846 188" fill="none" stroke="#B5AA99" stroke-width="3" stroke-dasharray="9 13"/>
+<circle cx="847" cy="187" r="11" fill="#922C43"/>
+<circle cx="692" cy="187" r="8" fill="#12382D"/>
+<path d="M445 391C397 350 392 283 418 239C445 188 512 187 550 231C573 261 581 314 610 348C637 378 644 437 609 471L431 477C407 446 423 408 445 391Z" fill="url(#green)"/>
+<path d="M463 248C486 218 545 233 548 287C551 319 533 347 509 360L513 389L459 393L463 351C438 336 431 274 463 248Z" fill="#F6ECE0" stroke="#12382D" stroke-width="5" stroke-linejoin="round"/>
+<path d="M447 305C451 254 483 230 514 236C546 242 550 266 550 291C537 274 523 273 505 265C497 290 478 303 447 305Z" fill="#12382D"/>
+<path d="M443 290C424 347 399 386 382 414C357 451 385 488 431 490" stroke="#12382D" stroke-width="36" stroke-linecap="round" fill="none"/>
+<path d="M544 250C570 292 571 353 608 395C637 433 611 470 588 478" stroke="#12382D" stroke-width="35" stroke-linecap="round" fill="none"/>
+<path d="M456 383L425 396C378 418 359 457 354 516L340 666H655L644 516C631 438 597 402 531 382L497 428Z" fill="#12382D"/>
+<path d="M455 380L497 428L530 381L554 411L520 508L481 507L426 411Z" fill="#F7F2EA" stroke="#12382D" stroke-width="5"/>
+<path d="M424 413L462 521L444 667M554 412L524 523L542 665" stroke="#F7F2EA" stroke-width="4" fill="none"/>
+<g filter="url(#shade)">
+<path d="M401 465H748Q765 465 759 482L715 654H361L385 480Q387 465 401 465Z" fill="#FAF7F1" stroke="#274B3E" stroke-width="5"/>
+<path d="M358 654H718L744 678H318Z" fill="#E5E0D6" stroke="#274B3E" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="563" cy="568" r="21" fill="#DFDACF"/>
+</g>
+<g filter="url(#shade)">
+<rect x="91" y="402" width="174" height="123" rx="14" fill="#FFFFFF"/>
+<rect x="116" y="427" width="96" height="8" rx="4" fill="#C8D1C9"/>
+<rect x="116" y="446" width="123" height="8" rx="4" fill="#E7EAE6"/>
+<circle cx="135" cy="491" r="15" fill="#DFE8DD" stroke="#12382D" stroke-width="2"/>
+<path d="M129 491L134 496L143 485" fill="none" stroke="#12382D" stroke-width="3" stroke-linecap="round"/>
+<rect x="158" y="487" width="80" height="8" rx="4" fill="#D1D9D1"/>
+</g>
+<g filter="url(#shade)">
+<rect x="743" y="326" width="164" height="116" rx="14" fill="#FFFFFF"/>
+<path d="M770 398L797 377L826 387L856 350" fill="none" stroke="#12382D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="770" cy="398" r="6" fill="#922C43"/><circle cx="797" cy="377" r="6" fill="#922C43"/><circle cx="826" cy="387" r="6" fill="#922C43"/><circle cx="856" cy="350" r="6" fill="#922C43"/>
+</g>
+<path d="M866 675V503" stroke="#12382D" stroke-width="6"/>
+<path d="M866 594C813 598 796 550 802 526C837 529 867 555 866 594Z" fill="#12382D"/>
+<path d="M865 571C907 553 922 507 909 476C872 493 852 528 865 571Z" fill="#204B3D"/>
+<path d="M866 636C901 637 929 605 929 578C887 577 868 599 866 636Z" fill="#12382D"/>
+<path d="M836 676H902L895 701H842Z" fill="#C5B5A1" stroke="#12382D" stroke-width="4"/>
+</svg>
