@@ -400,6 +400,8 @@ p{color:var(--body)}
 @keyframes network-step{0%,19%,100%{transform:translateY(0);background:#fff;border-color:#e8eee8}9%{transform:translateY(-5px);background:#f4f7f1;border-color:#b8cec0}}
 @keyframes network-travel{from{offset-distance:0%}to{offset-distance:100%}}
 html.motion-paused .next-art *,html.motion-paused .hero-visual .visual-note span,html.motion-paused .hero-visual .visual-caption{animation-play-state:paused!important;animation:none!important}
+html.motion-paused .next-art .network-tracer{display:none!important}
+.hero-visual .motion-toggle[hidden]{display:none!important}
 @media(max-width:800px){
   .next-art .art-node{padding:9px 13px;font-size:.78rem}
   .hero-visual .motion-toggle{bottom:0}
