@@ -1,0 +1,9 @@
+# RAUVIAWEB · Mónica García Urrutia
+# El dominio de publicación aún no está confirmado. Generar Sitemap mediante:
+# npm run seo:build -- --site-url https://DOMINIO_CONFIRMADO
+
+User-agent: *
+Allow: /
+
+# El CV incluye <meta name="robots" content="noindex">; no bloquearlo por robots
+# para permitir que los buscadores respeten el noindex.
