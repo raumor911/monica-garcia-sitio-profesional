@@ -30,7 +30,7 @@ Todas las acciones de contacto directo se configuran desde `app.js` y apuntan a:
 
 Hay mensajes distintos para oportunidades laborales, solicitud de CV y conversación sobre el dashboard. No se ha integrado un formulario, WhatsApp Business API, bot ni seguimiento de conversiones. No se almacena información personal del visitante.
 
-El botón **Solicitar mi CV** va a WhatsApp porque no se ha publicado un PDF descargable: el CV disponible requiere revisar datos académicos y actualizar su enfoque hacia producto antes de exponerse públicamente.
+El botón **Ver mi CV** abre `cv.html`, una versión HTML imprimible del resumen profesional, con opción de guardar como PDF desde el navegador. No se publica el PDF original proporcionado porque hay una discrepancia académica por verificar; la versión HTML omite el nombre de la universidad hasta confirmarlo.
 
 ## Criterios editoriales y pendientes antes de publicar
 
@@ -78,3 +78,9 @@ La sección **Mi trayectoria** ahora muestra cinco experiencias en una sola lín
 - **Rendimiento:** gráficos vectoriales y CSS, sin animación sobre tamaño de layout, sin paquetes nuevos y sin llamadas de red o telemetría adicionales. El botón no altera otros enlaces ni funcionalidades.
 
 **Comprobación recomendada:** probar entrada y salida de sección, reproducción y pausa, cambio de preferencia del sistema, vista de 360 px y navegadores Chrome, Safari y Firefox. El contenido permanece visible sin ejecutar JavaScript.
+
+## Hero según mockup aprobado
+
+La portada utiliza el encabezado en dos líneas **«OPERACIONES HOY, / MEJORES PRODUCTOS MAÑANA»**, el nombre en dos renglones, la especialidad **Product Operations & Client Experience**, la descripción de su propuesta de valor y los dos CTA del mockup. El botón **Hablemos por WhatsApp** conserva el contacto configurado; **Ver mi CV** abre la versión HTML imprimible y no redirige a WhatsApp porque no busca iniciar una conversación. La disponibilidad distingue **México / Remoto** de **Abierta a oportunidades en México y equipos internacionales**.
+
+El formato del CV en `cv.html` no reclama experiencia formal previa como Product Owner y evita publicar una universidad todavía no confirmada. Se puede imprimir o guardar como PDF con el botón correspondiente.
