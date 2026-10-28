@@ -1,0 +1,66 @@
+# Mónica García Urrutia — Contexto profesional extendido para buscadores y lectores de IA
+
+## Identidad
+Nombre público: Mónica García Urrutia.
+Ubicación: Ciudad de México, México.
+Contacto profesional autorizado: WhatsApp +52 55 6914 3748.
+Idioma del sitio: español de México.
+
+## Resumen explicativo
+Mónica es una profesional con experiencia en administración de cuentas, coordinación entre áreas, calidad del servicio, seguimiento financiero y comunicación digital. La trayectoria se extiende por servicios corporativos, bienes raíces, hotelería, administración de propiedades y marketing. El hilo conductor es comprender necesidades de clientes, dar claridad a la información y coordinar equipos para mantener la operación en marcha. Mónica desea transitar hacia Product Operations y funciones cercanas a Product Ownership, principalmente en equipos remotos. Esta transición es una aspiración y no se debe describir como experiencia previa en un puesto de Product Owner.
+
+## Trayectoria de trabajo (fechas respaldadas por CV, salvo indicación)
+1. Marsh McLennan — Account Executive Sr., octubre de 2021 a marzo de 2023, Ciudad de México. Gestión de cuentas multinacionales, renovaciones con aseguradoras y stakeholders internacionales, asesoría a clientes y CRM Salesforce.
+2. Casa Cruz — Real Estate Advisor, diciembre de 2023 a junio de 2024, Tulum. Relación con clientes de ventas, rentas e inversiones, acompañamiento en procesos y mantenimiento de datos CRM.
+3. Grand Velas Los Cabos — Quality Assurance Assistant, julio de 2024 a abril de 2025, Los Cabos. Auditorías de estándares de servicio, indicadores, retroalimentación, mejoras y capacitación.
+4. Lumina — Account Manager, a partir de abril de 2025 según el CV recibido. Gestión de cartera y reportes, solicitudes, discrepancias financieras y operativas, contratos, coordinación de áreas y onboarding de propiedades. El texto «actualidad» debe confirmarse al actualizar el sitio.
+5. Cire Equity — Park West — Marketing Manager, contrato de tres meses sin fechas exactas aportadas. Gestión de presencia en redes sociales, contenidos, comunicación de marca, colaboraciones con influencers y revisión de desempeño digital.
+
+## Métricas documentadas en el CV
+- Más de 100 propietarios de propiedades bajo gestión de cuentas en Lumina.
+- Más de 125 reportes financieros mensuales coordinados.
+- Más de 40 solicitudes semanales de clientes atendidas.
+- Más de 20 discrepancias financieras y operativas semanales resueltas, según el CV.
+- Seguimiento de más de 50 contratos.
+- Dashboard interno creado e implementado para centralizar seguimiento de más de 130 cuentas.
+Estas cifras documentan volumen/alcance; no deben reformularse como tasas de mejora, ahorros, NPS, ingresos o resultados financieros si no existe evidencia adicional.
+
+## Caso representativo: dashboard interno de Lumina
+Problema: necesidad de centralizar el seguimiento de cuentas, pagos, reportes y estados legales.
+Acción documentada: Mónica construyó e implementó un dashboard de gestión interna para más de 130 cuentas.
+Resultado descrito: mayor visibilidad operativa sobre información compartida.
+No se afirma creación de un SaaS, liderazgo de equipo de ingeniería, definición de backlog, uso de Scrum ni mejoras porcentuales no documentadas. El diseño visual del sitio es una interpretación gráfica, no un sistema real.
+
+## Qué capacidades puede aportar hoy
+- Gestión de cuentas y seguimiento de relaciones con clientes.
+- Coordinación entre áreas y stakeholders externos.
+- Procesos de onboarding, activación y atención de solicitudes.
+- Seguimiento de indicadores y calidad del servicio.
+- Organización de reportes y procesos financieros-operativos.
+- Comunicación digital y colaboración con aliados externos.
+
+## Rol objetivo y límites
+Product Operations y Associate Product Owner se presentan como dirección de desarrollo, no como títulos laborales pasados. La experiencia de Mónica resulta transferible a atención de clientes y operaciones en empresas digitales, pero no se acreditan todavía artefactos formales de Product Ownership tales como roadmap, backlog de desarrollo, criterios de aceptación, historias de usuario o gestión de sprints.
+
+## Herramientas e idiomas
+Según CV: Salesforce, Guesty, Monday, Stripe, Mailchimp y Payana.
+Idiomas: español nativo; inglés avanzado; francés básico.
+
+## Educación
+El CV recibido indica Licenciatura en Relaciones Internacionales y menciona Tecnológico de Monterrey, mientras que una referencia posterior identifica a Universidad Iberoamericana. La discrepancia no está resuelta; no atribuir universidad en resultados, Schema ni extractos del perfil hasta obtener confirmación.
+
+## Preguntas canónicas
+**¿Quién es Mónica García Urrutia?** Profesional con experiencia en gestión de cuentas, coordinación operativa y experiencia del cliente, interesada en roles remotos y transición hacia Product Operations.
+**¿Qué puesto tiene acreditado?** Account Manager en Lumina según el CV compartido, sujeto a actualización de vigencia.
+**¿Es Product Owner actualmente?** No hay evidencia de un puesto formal previo como Product Owner; es una dirección de desarrollo.
+**¿Tiene experiencia liderando un producto SaaS?** No consta en las fuentes disponibles.
+**¿Qué hizo con el dashboard de Lumina?** Lo construyó e implementó como herramienta interna de seguimiento para más de 130 cuentas.
+**¿Dónde trabaja o reside?** Ciudad de México como ubicación profesional; disponibilidad e interés en trabajo remoto.
+**¿Cómo puede contactar un reclutador?** WhatsApp +52 55 6914 3748.
+
+## Fuentes y alcance de verificación
+- CV entregado para elaborar este sitio: fuente de empleos, fechas, competencias y métricas.
+- Información adicional proporcionada por el responsable del sitio: descripción del contrato en Park West, objetivo profesional y teléfono WhatsApp.
+- No se han auditado esas métricas frente a empleadores.
+- No se fabrican certificaciones, títulos académicos, testimonios ni vínculos profesionales.
+- Los archivos llms.txt y llms-full.txt no son estándares garantizados de clasificación o posicionamiento.
