@@ -4,26 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#15372e" />
-  <meta name="description" content="Conoce a Mónica García Urrutia: gestión de clientes, operaciones, mejora de procesos y experiencia en coordinación de equipos. Interesada en oportunidades remotas en Product Operations." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Mónica García Urrutia" />
+  <meta name="description" content="Mónica García Urrutia: experiencia en Account Management, operaciones, onboarding y mejora de procesos. Conoce su trayectoria y transición hacia Product Operations, con interés en trabajo remoto." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta property="og:type" content="profile" />
   <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="Mónica García Urrutia — Perfil profesional" />
   <meta property="og:title" content="Mónica García Urrutia | Client Operations & Product Operations" />
-  <meta property="og:description" content="Personas, procesos y soluciones con impacto. Conoce mi trayectoria, lo que puedo aportar y hacia dónde quiero crecer profesionalmente." />
+  <meta property="og:description" content="Conozco a los clientes, coordino operaciones y mejoro procesos. Explora mi experiencia y mi transición profesional hacia Product Operations." />
   <meta property="og:image" content="assets/monica-garcia-ilustracion-hero.svg" />
+  <meta property="og:image:alt" content="Ilustración conceptual del perfil profesional de Mónica García Urrutia" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mónica García Urrutia | Client Operations & Product Operations" />
+  <meta name="twitter:description" content="Gestión de clientes, coordinación de equipos y mejora de procesos. Perfil profesional con interés en Product Operations." />
   <title>Mónica García Urrutia | Client Operations & Product Operations</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preload" href="assets/monica-garcia-ilustracion-hero.svg" as="image" type="image/svg+xml" />
+  <link rel="alternate" type="text/plain" title="Contexto para lectores de IA" href="llms.txt" />
   <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Mónica García Urrutia",
-    "description":"Profesional con experiencia en Account Management, Client Operations, coordinación entre áreas y mejora de procesos; interesada en Product Operations.",
-    "jobTitle":"Account Manager",
-    "address":{"@type":"PostalAddress","addressLocality":"Ciudad de México","addressCountry":"MX"},
-    "knowsLanguage":["es","en","fr"],
-    "knowsAbout":["Account Management","Client Operations","Customer Experience","Process Improvement","Cross-functional Coordination","Product Operations"]
+  <script type="application/ld+json" id="profile-jsonld">{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "/#monica-garcia",
+        "name": "Mónica García Urrutia",
+        "description": "Profesional en gestión de cuentas, operaciones, onboarding y mejora de procesos; interesada en su transición a Product Operations.",
+        "telephone": "+525569143748",
+        "homeLocation": {"@type":"City","name":"Ciudad de México"},
+        "knowsLanguage": ["es","en","fr"],
+        "knowsAbout": ["Account Management","Client Operations","Customer Experience","Client Onboarding","Process Improvement","Cross-functional Coordination","Product Operations"],
+        "hasOccupation": {"@type":"Occupation","name":"Account Manager","description":"Gestión de cuentas de clientes, coordinación operativa y seguimiento de procesos"}
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "/#pagina-perfil",
+        "name": "Perfil profesional de Mónica García Urrutia",
+        "description": "Experiencia profesional, competencias transferibles y orientación hacia Product Operations",
+        "inLanguage": "es-MX",
+        "mainEntity": {"@id":"/#monica-garcia"}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "/#sitio",
+        "name": "Mónica García Urrutia — Sitio profesional",
+        "inLanguage": "es-MX",
+        "publisher": {"@id":"/#monica-garcia"}
+      }
+    ]
   }</script>
   <script src="app.js" defer></script>
 </head>
@@ -38,10 +66,11 @@
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span><span></span></button>
       <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#valor">Cómo aporto</a>
+        <a href="como-puedo-ayudarte/">Cómo puedo ayudarte</a>
         <a href="#trayectoria">Trayectoria</a>
         <a href="#proyecto">Proyecto</a>
         <a href="#habilidades">Habilidades</a>
+        <a href="perspectiva/">Perspectiva</a>
         <a class="nav-contact" href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -150,7 +179,11 @@
           <article class="value-card"><span class="card-index">04</span><div class="card-glyph" aria-hidden="true">◌</div><h3>Mejorar continuamente</h3><p>Observar métricas, escuchar retroalimentación y detectar oportunidades para simplificar la experiencia.</p></article>
         </div>
       </div>
-    </section>
+            <div class="seo-context-links" aria-label="Más información sobre mi perfil">
+          <a href="como-puedo-ayudarte/" class="seo-context-link"><span>Cómo puedo ayudarte</span><small>Problemas que puedo abordar con mi experiencia en operaciones y clientes</small><span aria-hidden="true">↗</span></a>
+          <a href="perspectiva/" class="seo-context-link"><span>Mi perspectiva</span><small>Cómo pienso, colaboro y por qué quiero evolucionar hacia producto</small><span aria-hidden="true">↗</span></a>
+        </div>
+</section>
 
     <section class="section journey-section" id="trayectoria" aria-labelledby="trayectoria-title">
       <div class="container journey-container">
