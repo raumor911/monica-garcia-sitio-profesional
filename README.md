@@ -87,7 +87,7 @@ El formato del CV en `cv.html` no reclama experiencia formal previa como Product
 
 ## SEO y LLMO — arquitectura semántica RAUVIAWEB
 
-La implementación sigue la lógica de los sitios profesionales de Erika Morales y Allison García: HTML público y legible por crawlers, intención diferenciada por página, datos estructurados, archivos para motores de búsqueda y un contexto trazable para lectores de IA. **No incluye telemetría ni un backend**; no se reusa ni se crea una conexión MySQL de los otros sitios sin una autorización explícita de infraestructura.
+La implementación sigue la lógica de los sitios profesionales de Erika Morales y Allison García: HTML público y legible por crawlers, intención diferenciada por página, datos estructurados, archivos para motores de búsqueda y un contexto trazable para lectores de IA. **Incluye ahora una capa opcional de telemetría con backend Node**, con sitio aislado `monica-garcia` y destino contractual MySQL Hostinger `u345974778_rauviaplatform`; se conserva el sitio público estático. La telemetría permanece desactivada hasta configurar credenciales privadas, validar el esquema y autorizar su publicación. Ver [guía de telemetría](docs/telemetry-hostinger.md).
 
 ### Páginas y política de indexación
 
@@ -130,3 +130,9 @@ Esta sección se ajustó al mockup de referencia: **sin titular gigante**, tres 
 **Validación editorial antes de publicar:** el mockup incorpora `Product Operations (en desarrollo)`, `Data Analysis (básico)`, `Team Collaboration`, `Notion` y `Google Workspace`. El cargo de Product Operations está expresamente identificado como una dirección de desarrollo. Las habilidades y herramientas adicionales del mockup deben revisarse con Mónica antes de interpretarlas como experiencia laboral acreditada; no se han agregado a Schema.org o a llms.txt como competencias documentadas. Las barras de idioma son representaciones cualitativas (nativo, avanzado, básico), no porcentajes certificados. Algunas insignias de marca son recreaciones vectoriales del mockup y deben sustituirse por artes autorizadas si se exige identidad corporativa oficial.
 
 Tres iconos (Stripe, Mailchimp y Notion) utilizan contornos vectoriales obtenidos del proyecto abierto Simple Icons (CC0), respetando que los nombres y símbolos siguen siendo marcas de sus titulares.
+
+## TEKTARYON G2/G3 — Telemetría y seis anchos
+
+Se implementó la instrumentación frontend de visitas, secciones y WhatsApp, y backend Node para eventos humanos y detección de crawlers, usando el contrato MySQL de Erika y Allison. Las claves nunca se incluyen en recursos públicos. El repositorio incorpora pruebas de servidor sin conexión real a Hostinger. La conexión de producción requiere verificar credenciales, esquema y hosting. Véase [`docs/telemetry-hostinger.md`](docs/telemetry-hostinger.md).
+
+Se corrigió el desbordamiento de `.content-contrast` a 1024 px con una única regla de tablet; la ejecución de `TEKTARYON G3 — Visual QA` conserva capturas de seis anchos y su ledger en GitHub Actions. G3 permanece sujeto a revisión de evidencias y no habilita automáticamente un despliegue.
