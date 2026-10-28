@@ -1,0 +1,61 @@
+/* SEO pages — accessible editorial layer; shares colors and navigation with the home page. */
+.seo-page{background:#fffefa}
+.page-hero{background:radial-gradient(circle at 84% 19%,#eee8de 0,transparent 50%),linear-gradient(110deg,#faf8f3,#f5f1ea);padding:68px 0 74px;border-bottom:1px solid #e8e6df}
+.page-hero-inner{max-width:1140px}
+.page-breadcrumb{display:flex;align-items:center;gap:12px;color:#66766c;font-size:.77rem;margin:0 0 33px}
+.page-breadcrumb a{text-decoration:underline;text-decoration-color:#c7d1c8;text-underline-offset:4px}
+.page-breadcrumb a:hover{color:#8f263e}
+.page-hero h1{font:500 clamp(2.9rem,6vw,5.65rem)/1.07 Georgia,"Times New Roman",serif;letter-spacing:-.06em;max-width:980px;color:#15372e;margin:0 0 22px}
+.page-hero .eyebrow{margin:0 0 16px}
+.page-lead{font-size:clamp(1.03rem,1.4vw,1.2rem);line-height:1.8;max-width:800px;margin:0;color:#41564a}
+.page-hero-actions{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:30px}
+.page-secondary-link{font-weight:700;font-size:.91rem;color:#8f263e;text-decoration:underline;text-underline-offset:6px}
+.page-secondary-link:hover{color:#15372e}
+.page-contents{max-width:1150px}
+.content-section{padding:76px 0;border-bottom:1px solid #e7e9e1}
+.content-section:last-child{border-bottom:0}
+.content-section h2{max-width:800px;font-size:clamp(2rem,3.55vw,3.3rem);line-height:1.12;margin-bottom:29px}
+.content-section>p:not(.eyebrow){font-size:1.06rem;line-height:1.85;max-width:850px}
+.content-section strong{color:#15372e}
+.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}
+.content-grid article{padding:33px;background:#f8f7f3;border:1px solid #eeeee8;border-radius:16px}
+.content-grid h3,.story-stack h3,.qa-list h3{font-size:1.42rem;letter-spacing:-.04em;margin:8px 0 12px}
+.content-grid p,.story-stack p,.qa-list p{font-size:.97rem;line-height:1.75;margin:0}
+.content-grid .proof{color:#62796b;font-size:.8rem;margin-top:18px;border-top:1px solid #e2e7dd;padding-top:12px}
+.number{font-size:.76rem;letter-spacing:.15em;font-weight:750;color:#8f263e;text-transform:uppercase}
+.content-contrast{margin-inline:-35px;padding:63px 35px;background:#f7f3ec;border:0;border-radius:18px}
+.qa-list{display:grid;gap:0;max-width:850px}
+.qa-list>div{padding:22px 0;border-bottom:1px solid #dce2d9}
+.qa-list>div:first-child{padding-top:0}
+.qa-list>div:last-child{border-bottom:0;padding-bottom:0}
+.story-stack{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.story-stack>div{padding:12px 0 18px 22px;border-left:2px solid #bfcfc1}
+.inline-details{display:flex;flex-wrap:wrap;gap:12px}
+.inline-details span{font-size:.88rem;background:#eef2ec;border-radius:8px;padding:12px}
+.page-bottom{background:#eff3ed;padding-block:55px}
+.page-bottom-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.page-bottom h2{font-size:clamp(1.8rem,2.5vw,2.6rem);margin:0 0 8px}
+.page-bottom p{margin:0}
+.page-bottom .eyebrow{margin-bottom:9px}
+.seo-context-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:34px}
+.seo-context-link{display:grid;grid-template-columns:1fr auto;gap:4px 10px;background:#fff;border:1px solid #e0e5df;border-radius:12px;padding:21px 23px;transition:box-shadow .2s,transform .2s}
+.seo-context-link:hover{box-shadow:0 8px 21px rgba(13,41,33,.07);transform:translateY(-2px)}
+.seo-context-link>span:first-child{font-family:Georgia,serif;font-size:1.26rem;letter-spacing:-.03em;color:#15372e}
+.seo-context-link>small{font-size:.79rem;color:#63746b;line-height:1.45;grid-column:1}
+.seo-context-link>span:last-child{grid-row:1;grid-column:2;color:#8f263e}
+@media(max-width:800px){
+  .page-hero{padding-block:47px 53px}
+  .content-section{padding-block:55px}
+  .content-contrast{margin-inline:0;padding:32px 25px}
+  .page-bottom-inner{align-items:flex-start;flex-direction:column;gap:20px}
+}
+@media(max-width:540px){
+  .page-hero h1{font-size:clamp(2.45rem,9vw,3.6rem)}
+  .page-lead{font-size:1rem}
+  .page-hero-actions .button{width:100%}
+  .content-grid,.story-stack,.seo-context-links{grid-template-columns:1fr}
+  .content-grid article{padding:23px}
+  .content-contrast{padding:27px 20px}
+  .content-section h2{font-size:2.13rem}
+  .page-breadcrumb{margin-bottom:20px}
+}
