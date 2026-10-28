@@ -6,8 +6,9 @@ import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const root=resolve(fileURLToPath(new URL("..",import.meta.url)));
+const canonicalOrigin="https://monicagarcia.rauviaweb.mx";
 const pages=["index.html","como-puedo-ayudarte/index.html","perspectiva/index.html"];
-const localFiles=[...pages,"cv.html","llms.txt","llms-full.txt","knowledge/monica-garcia.json","robots.txt","seo-pages.css"];
+const localFiles=[...pages,"cv.html","llms.txt","llms-full.txt","knowledge/monica-garcia.json","robots.txt","sitemap.xml","seo-pages.css"];
 const publishedPath="dist/seo-qa";
 const testOrigin="https://qa.rauviaweb.mx"; // Empleado SOLO en dist/seo-qa ignorado por Git.
 let errors=[];
@@ -17,6 +18,11 @@ const pageContent={};
 for(const path of pages){
   const html=await read(path);
   pageContent[path]=html;
+  const route=path==="index.html" ? "/" : "/"+path.replace(/index\.html$/,"");
+  const canonical=canonicalOrigin+route;
+  check(html.includes(`rel="canonical" href="${canonical}"`),`${path}: canonical no coincide con dominio confirmado`);
+  check(html.includes(`property="og:url" content="${canonical}"`),`${path}: og:url debe coincidir con canonical`);
+  check(html.includes(`property="og:image" content="${canonicalOrigin}/assets/monica-garcia-ilustracion-hero.svg"`),`${path}: og:image debe ser una URL absoluta canónica`);
   check((html.match(/<h1(?:\s|>)/g)||[]).length===1,`${path}: debe existir exactamente un H1`);
   check((html.match(/<title>/g)||[]).length===1,`${path}: falta título único`);
   check((html.match(/name="description"/g)||[]).length===1,`${path}: metadescripción única requerida`);
@@ -26,7 +32,7 @@ for(const path of pages){
   const tag=html.match(/<script\s+type="application\/ld\+json"\s+id="profile-jsonld">([\s\S]*?)<\/script>/);
   if(tag){try{
     const data=JSON.parse(tag[1]);check(data["@context"]==="https://schema.org",`${path}: contexto schema.org inválido`);
-    check(data["@graph"].some(n=>n["@type"]==="Person"&&n.name==="Mónica García Urrutia"),`${path}: Person ausente`);
+    check(data["@graph"].some(n=>n["@type"]==="Person"&&n.name==="Mónica García Urrutia"&&n["@id"]===canonicalOrigin+"/#monica-garcia"),`${path}: identidad Person debe apuntar a dominio canónico`);
   }catch(err){errors.push(`${path}: JSON-LD inválido (${err.message})`);}}
   for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g)){
     const url=match[1];
@@ -48,6 +54,13 @@ const knowledge=JSON.parse(await read("knowledge/monica-garcia.json"));
 check(knowledge.verified_externally===false,"Evitar afirmar verificación externa de métricas");
 check(Array.isArray(knowledge.unconfirmed)&&knowledge.unconfirmed.some(x=>x.includes("universidad")),"Registrar discrepancia académica");
 check((await read("llms.txt")).toLowerCase().includes("no se presenta como product owner"),"Aclarar transición en llms.txt");
+check((await read("llms.txt")).includes(canonicalOrigin+"/perspectiva/"),"llms.txt debe enlazar el dominio confirmado");
+check((await read("robots.txt")).includes("Sitemap: "+canonicalOrigin+"/sitemap.xml"),"robots.txt raíz debe apuntar al sitemap canónico");
+const sourceSitemap=await read("sitemap.xml");
+check((sourceSitemap.match(/<loc>/g)||[]).length===3,"El sitemap raíz debe tener tres rutas");
+check(sourceSitemap.includes("<loc>"+canonicalOrigin+"/</loc>"),"Falta la portada en sitemap raíz");
+check(!sourceSitemap.includes("/cv.html"),"El CV no debe aparecer en sitemap raíz");
+check(knowledge.entity.url===canonicalOrigin+"/","La identidad del registro de evidencia debe enlazar al dominio canónico");
 for(const p of localFiles){try{await stat(join(root,p));}catch{errors.push(`Falta recurso ${p}`);}}
 
 if(errors.length===0){
