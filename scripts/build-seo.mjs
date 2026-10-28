@@ -75,6 +75,9 @@ for (const item of ["styles.css","seo-pages.css","app.js","cv.html","llms-full.t
   await copyFile(join(root,item),join(out,item));
 }
 await cp(join(root,"assets"),join(out,"assets"),{recursive:true});
+// Browser-only telemetry module is public; server and DB adapters remain private.
+await mkdir(join(out,"telemetry"),{recursive:true});
+await copyFile(join(root,"telemetry/client.js"),join(out,"telemetry/client.js"));
 await cp(join(root,"knowledge"),join(out,"knowledge"),{recursive:true});
 for (const page of pages){
   const content=await readFile(join(root,page.src),"utf8");
