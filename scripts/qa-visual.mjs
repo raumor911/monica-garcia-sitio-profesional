@@ -95,8 +95,21 @@ try {
       let response;
       try {
         response = await page.goto(base + route.pathname, { waitUntil: "domcontentloaded", timeout: 25000 });
-        await page.evaluate(async () => { await document.fonts.ready; });
-        await page.waitForTimeout(550);
+        await page.evaluate(async () => {
+          await document.fonts.ready;
+          // A full-page screenshot alone does NOT trigger below-the-fold lazy images.
+          // Scroll like a real reader and request decoding before measuring loaded assets.
+          for (const image of document.images) image.loading = "eager";
+          const step = Math.max(450, Math.floor(window.innerHeight * 0.8));
+          for (let y = 0; y <= document.documentElement.scrollHeight; y += step) {
+            window.scrollTo(0, y);
+            await new Promise(resolve => setTimeout(resolve, 65));
+          }
+          window.scrollTo(0, 0);
+          const ready = Promise.all([...document.images].map(img => img.decode().catch(() => null)));
+          await Promise.race([ready, new Promise(resolve => setTimeout(resolve, 5000))]);
+        });
+        await page.waitForTimeout(350);
       } catch (e) {
         recordTest(route.pathname, s.width, "Route renders", String(e), "fail", null, "P0");
         await page.close();
