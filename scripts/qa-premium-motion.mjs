@@ -47,6 +47,10 @@ try {
       && !document.documentElement.classList.contains("premium-motion-active")
       && !document.querySelector(".premium-motion-pending"));
     report("global-pause",route,width,paused,"Pause completes reveals & preserves content");
+    // Resume illustration animations before the normal-mode evidence capture.
+    await page.locator(".hero-visual .motion-toggle").click();
+    const resumed=await page.evaluate(()=>!document.documentElement.classList.contains("motion-paused"));
+    report("resume-illustrations",route,width,resumed,"Toggle resumes the two illustrations without replaying editorial entrances");
    }else{
     const sel=route.includes("perspectiva")?".story-stack > div":".content-grid article";
     const loc=page.locator(sel).first();
