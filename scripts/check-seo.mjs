@@ -52,7 +52,7 @@ const home=pageContent["index.html"];
 const skillsSection=home.split('<section class="section section-cream skills-section"')[1]?.split('</section>')[0] ?? "";
 check((skillsSection.match(/class="brand-tool"/g)||[]).length===8,"El mockup exige ocho insignias de herramientas");
 check((skillsSection.match(/class="language-item"/g)||[]).length===3,"El mockup exige tres idiomas");
-check((skillsSection.match(/<li>/g)||[]).length===18,"La sección de habilidades debe contener diez chips y ocho marcas");
+check((skillsSection.match(/<li>/g)||[]).length===10,"La sección de habilidades debe contener diez chips");
 check(skillsSection.includes("Product Operations (en desarrollo)"),"La transición hacia Product Operations debe figurar como desarrollo");
 check(skillsSection.includes('class="visually-hidden" id="skills-title"'),"El título grande de habilidades debe permanecer oculto visualmente, pero accesible");
 check(["salesforce","guesty","monday","stripe","mailchimp","payana","notion","google-workspace","lang-es","lang-uk","lang-fr"].every(slug=>skillsSection.includes("assets/skills/"+slug+".svg")),"Faltan recursos SVG del mockup");
