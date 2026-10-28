@@ -70,6 +70,22 @@
 }
 @media (max-width: 560px) {
   html.premium-motion-active .timeline::before { display: none; }
+  /* Prevent animation control from overlapping the editorial image caption. */
+  .hero-visual .motion-toggle {
+    position: relative;
+    float: none;
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    margin: 12px 0 0 auto;
+    right: auto;
+    bottom: auto;
+  }
+  .hero-visual .visual-caption { bottom: 76px; }
+}
+@media (max-width: 560px) and (prefers-reduced-motion: reduce) {
+  /* With no control, keep the original approved caption placement. */
+  .hero-visual .visual-caption { bottom: 6%; }
 }
 @media (prefers-reduced-motion: reduce) {
   html .timeline::before { display: none !important; }
