@@ -18,6 +18,10 @@ const pageContent={};
 for(const path of pages){
   const html=await read(path);
   pageContent[path]=html;
+  const prefix=path==="index.html" ? "" : "../";
+  check(html.includes('href="'+prefix+'premium-motion.css"'),path+": stylesheet premium-motion ausente");
+  check(html.includes('src="'+prefix+'premium-motion.js"'),path+": script premium-motion ausente");
+
   const route=path==="index.html" ? "/" : "/"+path.replace(/index\.html$/,"");
   const canonical=canonicalOrigin+route;
   check(html.includes(`rel="canonical" href="${canonical}"`),`${path}: canonical no coincide con dominio confirmado`);
