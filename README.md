@@ -136,3 +136,15 @@ Tres iconos (Stripe, Mailchimp y Notion) utilizan contornos vectoriales obtenido
 Se implementó la instrumentación frontend de visitas, secciones y WhatsApp, y backend Node para eventos humanos y detección de crawlers, usando el contrato MySQL de Erika y Allison. Las claves nunca se incluyen en recursos públicos. El repositorio incorpora pruebas de servidor sin conexión real a Hostinger. La conexión de producción requiere verificar credenciales, esquema y hosting. Véase [`docs/telemetry-hostinger.md`](docs/telemetry-hostinger.md).
 
 Se corrigió el desbordamiento de `.content-contrast` a 1024 px con una única regla de tablet; la ejecución de `TEKTARYON G3 — Visual QA` conserva capturas de seis anchos y su ledger en GitHub Actions. G3 permanece sujeto a revisión de evidencias y no habilita automáticamente un despliegue.
+
+## Animación editorial premium — TEKTARYON (2026-10-27)
+
+Se implementó una capa progresiva de animación, `premium-motion.js` y `premium-motion.css`, para el perfil profesional de Mónica. Usa **Web Animations API** e **IntersectionObserver**, sin librerías nuevas ni dependencias de terceros. No altera la información, SEO, LLMO, telemetría, URLs, ni el destino de WhatsApp.
+
+**Secuencia deliberada:** el nombre, la especialidad y el mensaje principal aparecen escalonados; cifras, tarjetas, trayectoria, caso destacado, habilidades, iconos de plataformas y páginas interiores se revelan discretamente al entrar al viewport. Una línea avanza sobre la trayectoria y las barras de idioma se completan una sola vez. Sobre dispositivos con hover se incluyen microinteracciones de flechas, tarjetas e iconos, sin movimientos invasivos en móviles.
+
+**Principios:** todo el contenido está presente y visible desde HTML (sin JavaScript, sin compatibilidad Web Animations API o con `prefers-reduced-motion: reduce`), los efectos actúan únicamente sobre `opacity` y `transform`, no hay layout shifting intencional, la animación ocurre una sola vez por elemento y el control ya existente **Pausar animaciones** también finaliza las entradas pendientes y deja el contenido visible. El control puede reanudar las ilustraciones SVG; las entradas editoriales no se repiten continuamente.
+
+**Validación G3:** `scripts/qa-premium-motion.mjs` ejecuta Chromium a 360, 390, 768, 1024, 1440 y 1920 px para las tres páginas semánticas, validando observadores, línea de trayectoria, barras de idioma, pausa, navegación sin overflow y contenido con movimiento reducido. GitHub Actions conserva el resultado en `qa/visual-results/premium-motion-qa.json` y dos capturas adicionales con movimiento habilitado. El conjunto existente de 20 capturas con movimiento reducido se conserva para comparabilidad visual con mockups.
+
+**Nota editorial:** esta capa expresa dinamismo profesional sin implicar una afiliación gráfica oficial de la Universidad Iberoamericana ni atribuir títulos académicos adicionales que todavía no estén validados.
