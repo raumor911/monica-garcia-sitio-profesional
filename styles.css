@@ -85,7 +85,8 @@ p{color:var(--body)}
 .value-card{background:#fff;border:1px solid #eeeae3;border-radius:var(--radius);padding:30px 26px;min-height:278px;position:relative;box-shadow:0 8px 25px rgba(24,53,42,.025);transition:transform .2s,box-shadow .2s}
 .value-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .value-card .card-index{position:absolute;right:23px;top:24px;font-size:.72rem;color:#a5ada5;letter-spacing:.12em}
-.card-glyph{width:53px;height:53px;border-radius:50%;display:grid;place-items:center;background:#edf1eb;color:var(--pine);font-size:1.65rem;margin-bottom:22px}
+.card-glyph{width:53px;height:53px;border-radius:50%;display:grid;place-items:center;background:#edf1eb;color:var(--pine);margin-bottom:22px;flex:0 0 auto}
+.card-glyph svg{display:block;width:30px;height:30px;overflow:visible;stroke:currentColor;stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .value-card h3{font-size:1.4rem;margin-bottom:13px}
 .value-card p{font-size:.9rem;line-height:1.7;margin:0}
 .section-heading-left{margin-bottom:48px}
