@@ -1,18 +1,15 @@
 #!/usr/bin/env node
-// Prepara un sitio estático indexable SIN inventar el dominio de publicación.
-// Uso: node scripts/build-seo.mjs --site-url https://dominio-confirmado.example --out-dir dist
+// Genera archivos SEO con el dominio canónico confirmado de Mónica.
+// Uso: npm run seo:build (o --site-url para validar un origen alternativo en QA).
 import { copyFile, cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { resolve, join, relative, isAbsolute, sep } from "node:path";
+import { resolve, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const args = process.argv.slice(2);
 function getArg(flag) { const i=args.indexOf(flag); return i>=0 ? args[i+1] : null; }
-const rawSiteUrl = getArg("--site-url") ?? process.env.SITE_URL;
-if (!rawSiteUrl) {
-  console.error("Falta SITE_URL. Ejemplo: npm run seo:build -- --site-url https://dominio-confirmado.mx");
-  process.exit(2);
-}
+const canonicalOrigin = "https://monicagarcia.rauviaweb.mx";
+const rawSiteUrl = getArg("--site-url") ?? process.env.SITE_URL ?? canonicalOrigin;
 let url;
 try { url=new URL(rawSiteUrl); }
 catch { console.error("SITE_URL no es una URL válida"); process.exit(2); }
@@ -35,9 +32,11 @@ const pages=[
 const local=(pathname)=>origin+pathname;
 const escapeXml=(s)=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const escapeAttr=escapeXml;
-const absolute=(raw,route)=>{
-  if (/^https?:\/\//i.test(raw)) return raw;
-  return new URL(raw,local(route)).href;
+// Rebasa referencias del sitio oficial cuando la prueba usa otro origen.
+const siteUrl=(raw,route="/")=>{
+  const u=new URL(raw,new URL(route,canonicalOrigin));
+  if(u.origin!==canonicalOrigin) return u.href;
+  return origin+u.pathname+u.search+u.hash;
 };
 
 function prepareHtml(raw,route) {
@@ -45,8 +44,8 @@ function prepareHtml(raw,route) {
   if (!/<meta\s+name="description"/.test(raw) || !/<script[^>]+id="profile-jsonld"/.test(raw)) {
     throw new Error("Página sin metadescripción o estructura semántica: "+route);
   }
-  let html=raw.replace(/\s*<link\s+rel="canonical"[^>]*>/g,"").replace(/\s*<meta\s+property="og:url"[^>]*>/g,"");
-  html=html.replace(/(<meta\s+property="og:image"\s+content=")([^"]+)("[^>]*>)/,(whole,start,value,end)=>start+escapeAttr(absolute(value,route))+end);
+  let html=raw.replace(/\s*<link\s+rel="canonical"[^>]*>/g,"").replace(/\s*<meta\s+property="og:url"[^>]*>/g,"").replace(/\s*<meta\s+name="twitter:image"[^>]*>/g,"");
+  html=html.replace(/(<meta\s+property="og:image"\s+content=")([^"]+)("[^>]*>)/,(whole,start,value,end)=>start+escapeAttr(siteUrl(value,route))+end);
   const pic=html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/)?.[1];
   const meta=[
     `<link rel="canonical" href="${escapeAttr(canonical)}" />`,
@@ -61,9 +60,9 @@ function prepareHtml(raw,route) {
   try { data=JSON.parse(match[1]); } catch(e) { throw new Error("JSON-LD inválido: "+route+" "+e.message); }
   if (!Array.isArray(data["@graph"])) throw new Error("El grafo JSON-LD carece de @graph: "+route);
   for (const node of data["@graph"]) {
-    if (typeof node["@id"]==="string" && node["@id"].startsWith("/")) node["@id"]=local(node["@id"]);
-    if (node.mainEntity?.["@id"]?.startsWith("/")) node.mainEntity["@id"]=local(node.mainEntity["@id"]);
-    if (node.publisher?.["@id"]?.startsWith("/")) node.publisher["@id"]=local(node.publisher["@id"]);
+    if (typeof node["@id"]==="string") node["@id"]=siteUrl(node["@id"]);
+    if (typeof node.mainEntity?.["@id"]==="string") node.mainEntity["@id"]=siteUrl(node.mainEntity["@id"]);
+    if (typeof node.publisher?.["@id"]==="string") node.publisher["@id"]=siteUrl(node.publisher["@id"]);
     if(node["@type"]==="Person" || node["@type"]==="WebSite") node.url=local("/");
     if(["ProfilePage","AboutPage"].includes(node["@type"])) node.url=canonical;
   }
@@ -84,7 +83,7 @@ for (const page of pages){
   await writeFile(outputPath,prepareHtml(content,page.route),"utf8");
 }
 const rawLLMs=await readFile(join(root,"llms.txt"),"utf8");
-const llms=rawLLMs.replace(/\]\(\.\/(.*?)\)/g,(_m,path)=>`](${origin}/${path})`);
+const llms=rawLLMs.replace(/\]\(\.\/(.*?)\)/g,(_m,path)=>`](${origin}/${path})`).replaceAll(canonicalOrigin,origin);
 await writeFile(join(out,"llms.txt"),llms,"utf8");
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(p=>`  <url><loc>${escapeXml(local(p.route))}</loc></url>`).join("\n")}\n</urlset>\n`;
 await writeFile(join(out,"sitemap.xml"),sitemap,"utf8");
