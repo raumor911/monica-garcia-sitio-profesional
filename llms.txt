@@ -1,0 +1,36 @@
+# Mónica García Urrutia — Perfil profesional
+> Sitio profesional en español de Mónica García Urrutia, con experiencia comprobada en gestión de cuentas, coordinación operativa, experiencia del cliente y mejora de procesos. Busca evolucionar hacia Product Operations y funciones cercanas a Product Ownership. No se presenta como Product Owner con experiencia formal previa.
+
+## Páginas principales
+- [Inicio](./): resumen profesional, trayectoria y proyecto de dashboard.
+- [Cómo puedo ayudarte](./como-puedo-ayudarte/): problemas operativos que puede abordar y evidencia de su experiencia.
+- [Mi perspectiva](./perspectiva/): evolución profesional, forma de trabajar e interés por producto.
+- [Resumen profesional imprimible](./cv.html): documento para reclutadores; excluido de la indexación tradicional mediante noindex.
+
+## Experiencia y capacidades acreditadas
+- Lumina: gestión de más de 100 propietarios; coordinación de más de 125 reportes financieros mensuales y más de 40 solicitudes semanales; construcción e implementación de un dashboard interno para más de 130 cuentas; colaboración con Finanzas, Legal y Operaciones.
+- Grand Velas Los Cabos: auditorías de estándares de calidad, indicadores y mejora del servicio.
+- Casa Cruz: acompañamiento a clientes en operaciones inmobiliarias y gestión de CRM.
+- Marsh McLennan: gestión de cuentas multinacionales y coordinación de renovaciones internacionales, con experiencia en Salesforce.
+- Cire Equity — Park West: contrato de tres meses como Marketing Manager, con contenidos digitales, colaboradores externos e indicadores de redes sociales; fechas exactas sin confirmar.
+
+## Intereses profesionales, distintos de experiencia acreditada
+- Product Operations, Product Coordination y Associate Product Owner como objetivos de transición profesional.
+- También hay experiencia transferible hacia Account Management, Customer Success y Client Operations.
+- Interés en oportunidades de trabajo remoto en México y equipos internacionales.
+
+## Ubicación e idiomas
+- Ciudad de México, México.
+- Español nativo, inglés avanzado, francés básico.
+
+## Contacto profesional
+- WhatsApp: +52 55 6914 3748 (https://wa.me/525569143748).
+- No se publica un perfil de LinkedIn que no se haya verificado.
+
+## Transparencia
+- Las métricas son cifras procedentes del CV proporcionado, no datos auditados externamente.
+- La universidad y las fechas exactas de Park West se omiten mientras se confirman.
+- La representación gráfica del dashboard de Lumina es conceptual; no es una captura del sistema real.
+- Este archivo facilita la interpretación de contenido público. No garantiza indexación, citas, recomendaciones ni posiciones en motores de búsqueda o herramientas de IA.
+- [Contexto ampliado y límites de las afirmaciones](./llms-full.txt)
+- [Registro de afirmaciones y procedencia](./knowledge/monica-garcia.json)
