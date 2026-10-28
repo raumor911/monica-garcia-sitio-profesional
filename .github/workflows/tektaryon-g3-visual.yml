@@ -7,6 +7,13 @@ on:
     paths:
       - "scripts/qa-visual.mjs"
       - ".github/workflows/tektaryon-g3-visual.yml"
+      - "index.html"
+      - "styles.css"
+      - "seo-pages.css"
+      - "como-puedo-ayudarte/**"
+      - "perspectiva/**"
+      - "assets/**"
+      - "telemetry/client.js"
 
 permissions:
   contents: read
