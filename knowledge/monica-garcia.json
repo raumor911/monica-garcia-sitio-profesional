@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "entity": {
+    "id": "monica-garcia-urrutia",
+    "type": "Person",
+    "name": "Mónica García Urrutia",
+    "location": "Ciudad de México, México",
+    "languages": [
+      {
+        "name": "Español",
+        "level": "nativo"
+      },
+      {
+        "name": "Inglés",
+        "level": "avanzado"
+      },
+      {
+        "name": "Francés",
+        "level": "básico"
+      }
+    ],
+    "contact": {
+      "whatsapp": "https://wa.me/525569143748"
+    }
+  },
+  "intended_roles": [
+    "Product Operations",
+    "Product Coordinator",
+    "Associate Product Owner"
+  ],
+  "transition_disclaimer": "Interés de transición; ningún empleo registrado en el CV tiene el título Product Owner.",
+  "verified_externally": false,
+  "claims": [
+    {
+      "id": "career-marsh",
+      "statement": "Account Executive Sr. en Marsh McLennan de octubre de 2021 a marzo de 2023.",
+      "source_type": "cv_entregado",
+      "public_page": "/perspectiva/"
+    },
+    {
+      "id": "career-casa",
+      "statement": "Real Estate Advisor en Casa Cruz de diciembre de 2023 a junio de 2024.",
+      "source_type": "cv_entregado",
+      "public_page": "/perspectiva/"
+    },
+    {
+      "id": "career-velas",
+      "statement": "Quality Assurance Assistant en Grand Velas Los Cabos de julio de 2024 a abril de 2025.",
+      "source_type": "cv_entregado",
+      "public_page": "/perspectiva/"
+    },
+    {
+      "id": "career-lumina",
+      "statement": "Account Manager en Lumina desde abril de 2025 según el CV recibido; vigencia por confirmar.",
+      "source_type": "cv_entregado",
+      "public_page": "/"
+    },
+    {
+      "id": "metric-owners",
+      "statement": "Gestión de más de 100 propietarios en cartera.",
+      "source_type": "cv_entregado",
+      "public_page": "/"
+    },
+    {
+      "id": "metric-reports",
+      "statement": "Coordinación de más de 125 reportes financieros mensuales.",
+      "source_type": "cv_entregado",
+      "public_page": "/"
+    },
+    {
+      "id": "metric-requests",
+      "statement": "Atención de más de 40 solicitudes de clientes por semana.",
+      "source_type": "cv_entregado",
+      "public_page": "/"
+    },
+    {
+      "id": "metric-dashboard",
+      "statement": "Construyó e implementó un dashboard interno de gestión para más de 130 cuentas.",
+      "source_type": "cv_entregado",
+      "public_page": "/"
+    },
+    {
+      "id": "career-park-west",
+      "statement": "Marketing Manager en Cire Equity — Park West durante un contrato de tres meses, sin fechas exactas aportadas.",
+      "source_type": "descripcion_adicional_usuario",
+      "public_page": "/perspectiva/"
+    }
+  ],
+  "unconfirmed": [
+    "universidad de egreso (CV indica Tecnológico de Monterrey; mención posterior indica Iberoamericana)",
+    "fechas de Park West",
+    "vigencia actual de Lumina",
+    "LinkedIn público"
+  ],
+  "excluded_claims": [
+    "experiencia formal previa como Product Owner",
+    "Scrum Master certificado",
+    "cifras porcentuales de mejora del dashboard",
+    "liderazgo de desarrollo SaaS"
+  ],
+  "notes": "Afirmaciones procedentes del CV y datos facilitados para este sitio; no implican verificación independiente."
+}
