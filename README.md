@@ -84,3 +84,41 @@ La sección **Mi trayectoria** ahora muestra cinco experiencias en una sola lín
 La portada utiliza el encabezado en dos líneas **«OPERACIONES HOY, / MEJORES PRODUCTOS MAÑANA»**, el nombre en dos renglones, la especialidad **Product Operations & Client Experience**, la descripción de su propuesta de valor y los dos CTA del mockup. El botón **Hablemos por WhatsApp** conserva el contacto configurado; **Ver mi CV** abre la versión HTML imprimible y no redirige a WhatsApp porque no busca iniciar una conversación. La disponibilidad distingue **México / Remoto** de **Abierta a oportunidades en México y equipos internacionales**.
 
 El formato del CV en `cv.html` no reclama experiencia formal previa como Product Owner y evita publicar una universidad todavía no confirmada. Se puede imprimir o guardar como PDF con el botón correspondiente.
+
+## SEO y LLMO — arquitectura semántica RAUVIAWEB
+
+La implementación sigue la lógica de los sitios profesionales de Erika Morales y Allison García: HTML público y legible por crawlers, intención diferenciada por página, datos estructurados, archivos para motores de búsqueda y un contexto trazable para lectores de IA. **No incluye telemetría ni un backend**; no se reusa ni se crea una conexión MySQL de los otros sitios sin una autorización explícita de infraestructura.
+
+### Páginas y política de indexación
+
+| URL | Objetivo | Indexación |
+|---|---|---|
+| `/` | Perfil, trayectoria, resultados y dashboard de Lumina | Sí |
+| `/como-puedo-ayudarte/` | Necesidades de reclutadores y problemas que puede resolver | Sí |
+| `/perspectiva/` | Narrativa de transición y criterio de trabajo | Sí |
+| `/cv.html` | CV legible e imprimible para el visitante | No; mantiene `noindex,follow` |
+
+Los archivos `llms.txt`, `llms-full.txt` y `knowledge/monica-garcia.json` ofrecen contexto sobre experiencia, intereses, métricas, procedencia y límites de las afirmaciones. No son un mecanismo garantizado de presencia, cita o ranking de IA. No se inventan certificaciones, universidades, enlaces de LinkedIn ni experiencia de Product Owner.
+
+### Publicar con dominio real
+
+La fuente de Git **no declara una URL canónica inventada**. Una vez que el dominio de Mónica esté confirmado, genera la carpeta publicable:
+
+```bash
+npm run seo:build -- --site-url https://DOMINIO_CONFIRMADO
+npm test
+```
+
+> Reemplaza `https://DOMINIO_CONFIRMADO` con el origen HTTPS real, sin ruta ni barra adicional en el argumento. El generador no acepta dominios de ejemplo y **no realiza ningún despliegue ni push adicional**.
+
+`seo:build` produce `dist/` con las páginas y recursos, canonical por ruta, `og:url`, imágenes OG absolutas, identificadores del grafo JSON-LD vinculados al mismo dominio, `robots.txt` con el sitemap de producción y `sitemap.xml` con exactamente las tres páginas indexables. `dist/` está ignorado por Git.
+
+No publiques directamente la raíz del repositorio como carpeta final si necesitas sitemap/canonical definitivos; sirve para revisar localmente mediante Live Server. Usa `dist/` como raíz de archivos estáticos en el hosting elegido cuando llegue el momento.
+
+### Verificación y límites
+
+Ejecuta `npm test`: valida sintaxis JavaScript, enlaces locales, H1 y metadescripciones por página, JSON-LD, coherencia de identidad, avisos de no verificación externa, CV noindex, sitemap y canonical construidos con un dominio de prueba solo en una carpeta temporal que el propio test elimina. El workflow `.github/workflows/seo-llmo-qa.yml` repite la validación en GitHub Actions, **sin publicar el sitio**.
+
+Antes de solicitar indexación, confirmar: dominio y HTTPS, redirección entre variantes del host, institución educativa, fechas exactas de Park West, vigencia de Lumina, autorización para publicar métricas, imagen de Open Graph compatible con los canales sociales deseados, enlace LinkedIn real y Search Console. La declaración `og:image` actual usa una ilustración SVG y debe validarse con los scrapers de destino; no todos aceptan SVG.
+
+La capa es compatible con HTML estático y mantiene las CTA por WhatsApp, el estilo editorial, las animaciones y el footer que acredita a RAUVIA Consulting.
