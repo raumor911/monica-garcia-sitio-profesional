@@ -1,11 +1,12 @@
 # Mónica García Urrutia — Perfil profesional
+> Sitio oficial: https://monicagarcia.rauviaweb.mx/
 > Sitio profesional en español de Mónica García Urrutia, con experiencia comprobada en gestión de cuentas, coordinación operativa, experiencia del cliente y mejora de procesos. Busca evolucionar hacia Product Operations y funciones cercanas a Product Ownership. No se presenta como Product Owner con experiencia formal previa.
 
 ## Páginas principales
-- [Inicio](./): resumen profesional, trayectoria y proyecto de dashboard.
-- [Cómo puedo ayudarte](./como-puedo-ayudarte/): problemas operativos que puede abordar y evidencia de su experiencia.
-- [Mi perspectiva](./perspectiva/): evolución profesional, forma de trabajar e interés por producto.
-- [Resumen profesional imprimible](./cv.html): documento para reclutadores; excluido de la indexación tradicional mediante noindex.
+- [Inicio](https://monicagarcia.rauviaweb.mx/): resumen profesional, trayectoria y proyecto de dashboard.
+- [Cómo puedo ayudarte](https://monicagarcia.rauviaweb.mx/como-puedo-ayudarte/): problemas operativos que puede abordar y evidencia de su experiencia.
+- [Mi perspectiva](https://monicagarcia.rauviaweb.mx/perspectiva/): evolución profesional, forma de trabajar e interés por producto.
+- [Resumen profesional imprimible](https://monicagarcia.rauviaweb.mx/cv.html): documento para reclutadores; excluido de la indexación tradicional mediante noindex.
 
 ## Experiencia y capacidades acreditadas
 - Lumina: gestión de más de 100 propietarios; coordinación de más de 125 reportes financieros mensuales y más de 40 solicitudes semanales; construcción e implementación de un dashboard interno para más de 130 cuentas; colaboración con Finanzas, Legal y Operaciones.
@@ -32,5 +33,5 @@
 - La universidad y las fechas exactas de Park West se omiten mientras se confirman.
 - La representación gráfica del dashboard de Lumina es conceptual; no es una captura del sistema real.
 - Este archivo facilita la interpretación de contenido público. No garantiza indexación, citas, recomendaciones ni posiciones en motores de búsqueda o herramientas de IA.
-- [Contexto ampliado y límites de las afirmaciones](./llms-full.txt)
-- [Registro de afirmaciones y procedencia](./knowledge/monica-garcia.json)
+- [Contexto ampliado y límites de las afirmaciones](https://monicagarcia.rauviaweb.mx/llms-full.txt)
+- [Registro de afirmaciones y procedencia](https://monicagarcia.rauviaweb.mx/knowledge/monica-garcia.json)
