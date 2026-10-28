@@ -122,3 +122,11 @@ Ejecuta `npm test`: valida sintaxis JavaScript, enlaces locales, H1 y metadescri
 Antes de solicitar indexación, comprobar que el dominio confirmado tenga DNS y certificado HTTPS, resuelva correctamente las tres rutas, que no existan versiones duplicadas del host, y confirmar institución educativa, fechas exactas de Park West, vigencia de Lumina, autorización para publicar métricas, imagen de Open Graph compatible con redes sociales, enlace LinkedIn real y Search Console. La declaración `og:image` actual usa una ilustración SVG y debe validarse con los scrapers de destino; no todos aceptan SVG.
 
 La capa es compatible con HTML estático y mantiene las CTA por WhatsApp, el estilo editorial, las animaciones y el footer que acredita a RAUVIA Consulting.
+
+## Fidelidad visual — Habilidades, herramientas e idiomas
+
+Esta sección se ajustó al mockup de referencia: **sin titular gigante**, tres columnas compactas separadas por líneas finas, 10 etiquetas de habilidades, 8 marcas en dos filas de cuatro, y banderas redondas con barras cualitativas para español, inglés y francés. El diseño mantiene una sola columna en móvil y dos columnas intermedias en tableta. Los recursos gráficos están en `assets/skills/*.svg` y no requieren red para cargar.
+
+**Validación editorial antes de publicar:** el mockup incorpora `Product Operations (en desarrollo)`, `Data Analysis (básico)`, `Team Collaboration`, `Notion` y `Google Workspace`. El cargo de Product Operations está expresamente identificado como una dirección de desarrollo. Las habilidades y herramientas adicionales del mockup deben revisarse con Mónica antes de interpretarlas como experiencia laboral acreditada; no se han agregado a Schema.org o a llms.txt como competencias documentadas. Las barras de idioma son representaciones cualitativas (nativo, avanzado, básico), no porcentajes certificados. Algunas insignias de marca son recreaciones vectoriales del mockup y deben sustituirse por artes autorizadas si se exige identidad corporativa oficial.
+
+Tres iconos (Stripe, Mailchimp y Notion) utilizan contornos vectoriales obtenidos del proyecto abierto Simple Icons (CC0), respetando que los nombres y símbolos siguen siendo marcas de sus titulares.
