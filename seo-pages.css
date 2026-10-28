@@ -43,6 +43,8 @@
 .seo-context-link>span:first-child{font-family:Georgia,serif;font-size:1.26rem;letter-spacing:-.03em;color:#15372e}
 .seo-context-link>small{font-size:.79rem;color:#63746b;line-height:1.45;grid-column:1}
 .seo-context-link>span:last-child{grid-row:1;grid-column:2;color:#8f263e}
+/* TEKTARYON DEF-001 / DEF-002: container side gutters are 24px at 801–1100px. */
+@media(min-width:801px) and (max-width:1100px){.content-contrast{margin-inline:-24px}}
 @media(max-width:800px){
   .page-hero{padding-block:47px 53px}
   .content-section{padding-block:55px}
