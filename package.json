@@ -1,0 +1,10 @@
+{
+  "name": "monica-garcia-professional-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seo:build": "node scripts/build-seo.mjs",
+    "seo:check": "node scripts/check-seo.mjs",
+    "test": "node --check app.js && node scripts/check-seo.mjs"
+  }
+}
