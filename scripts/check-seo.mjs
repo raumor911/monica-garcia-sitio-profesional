@@ -49,6 +49,11 @@ check(new Set(titles).size===pages.length,"Títulos duplicados");
 const cv=await read("cv.html");
 check(/name="robots"\s+content="noindex/.test(cv),"El CV imprimible debe conservar noindex");
 const home=pageContent["index.html"];
+for (const pageName of pages) {
+  const html=pageContent[pageName];
+  check(!/<a[^>]+href="(?:\.\.\/)?cv\.html"/i.test(html),pageName+": no deben existir CTA al CV, solo WhatsApp para contacto");
+}
+
 const skillsSection=home.split('<section class="section section-cream skills-section"')[1]?.split('</section>')[0] ?? "";
 check((skillsSection.match(/class="brand-tool"/g)||[]).length===8,"El mockup exige ocho insignias de herramientas");
 check((skillsSection.match(/class="language-item"/g)||[]).length===3,"El mockup exige tres idiomas");
