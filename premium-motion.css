@@ -1,0 +1,83 @@
+/* RAUVIAWEB Professional — Premium motion layer (TEKTARYON).
+   Progressive enhancement only: all content is visible without JavaScript. */
+@media (prefers-reduced-motion: no-preference) {
+  html.premium-motion-active:not(.motion-paused) .timeline {
+    position: relative;
+    isolation: isolate;
+  }
+  html.premium-motion-active:not(.motion-paused) .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -2px;
+    height: 2px;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(90deg, #8f263e, #315c4f);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 1250ms cubic-bezier(.22,.72,.24,1);
+  }
+  html.premium-motion-active:not(.motion-paused) .timeline.premium-line-drawn::before {
+    transform: scaleX(1);
+  }
+  html.premium-motion-active:not(.motion-paused) .skills-section .language-meter span {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 980ms cubic-bezier(.22,.72,.24,1);
+  }
+  html.premium-motion-active:not(.motion-paused) .skills-section .language-levels.premium-bars-filled .language-meter span {
+    transform: scaleX(1);
+  }
+  html.premium-motion-active:not(.motion-paused) .skills-section .language-item:nth-child(2) .language-meter span {
+    transition-delay: 120ms;
+  }
+  html.premium-motion-active:not(.motion-paused) .skills-section .language-item:nth-child(3) .language-meter span {
+    transition-delay: 220ms;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero .button-arrow,
+  .page-hero-actions .button span[aria-hidden="true"],
+  .page-bottom .button span[aria-hidden="true"] {
+    transition: transform 260ms cubic-bezier(.2,.75,.25,1);
+  }
+  .hero .button:hover .button-arrow,
+  .page-hero-actions .button:hover span[aria-hidden="true"],
+  .page-bottom .button:hover span[aria-hidden="true"] {
+    transform: translateX(4px);
+  }
+  .skills-section .brand-tool img {
+    transition: transform 320ms cubic-bezier(.2,.75,.25,1), filter 320ms ease;
+  }
+  .skills-section .brand-tool:hover img {
+    transform: translateY(-3px) scale(1.045);
+    filter: drop-shadow(0 5px 7px rgba(21,55,46,.12));
+  }
+  .value-card .card-glyph,
+  .content-grid article {
+    transition: transform 300ms cubic-bezier(.2,.75,.25,1), background-color 300ms ease, box-shadow 300ms ease;
+  }
+  .value-card:hover .card-glyph {
+    transform: translateY(-3px);
+    background-color: #e5ede5;
+  }
+  .content-grid article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(21,55,46,.065);
+  }
+}
+@media (max-width: 560px) {
+  html.premium-motion-active .timeline::before { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html .timeline::before { display: none !important; }
+  html .skills-section .language-meter span { transform: none !important; transition: none !important; }
+  html .premium-motion-pending { opacity: 1 !important; transform: none !important; }
+}
+html.motion-paused .timeline::before { display: none !important; }
+html.motion-paused .skills-section .language-meter span {
+  transform: none !important;
+  transition: none !important;
+}
