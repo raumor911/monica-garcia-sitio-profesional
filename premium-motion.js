@@ -41,13 +41,20 @@
     animation.addEventListener("finish", done, { once: true });
     animation.addEventListener("cancel", () => active.delete(animation), { once: true });
   };
+  let motionStopped = false;
   const revealAll = () => {
+    // One-way transition: avoid a MutationObserver feedback loop on <html>.
+    if (motionStopped) return;
+    motionStopped = true;
+    pauseWatch.disconnect();
     observer?.disconnect();
     document.querySelectorAll(".premium-motion-pending").forEach(settle);
     for (const a of [...active]) {
       try { a.finish(); } catch { a.cancel(); }
     }
-    root.classList.remove("premium-motion-active");
+    if (root.classList.contains("premium-motion-active")) {
+      root.classList.remove("premium-motion-active");
+    }
   };
   // Existing site control toggles <html class="motion-paused">.
   const pauseWatch = new MutationObserver(() => {
