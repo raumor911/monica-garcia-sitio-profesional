@@ -1,0 +1,43 @@
+name: TEKTARYON G3 — Visual QA (six widths)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/qa-visual.mjs"
+      - ".github/workflows/tektaryon-g3-visual.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    name: Capture six widths and audit page geometry
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright (CI-only)
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start isolated static preview
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/tektaryon-monica-http.log 2>&1 &
+          echo $! > /tmp/tektaryon-monica-http.pid
+      - name: TEK-03 — capture and inspect all six widths
+        id: visual
+        run: node scripts/qa-visual.mjs
+      - name: Upload screenshots and QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monica-g3-visual-six-widths
+          path: qa/visual-results/
+          if-no-files-found: warn
+          retention-days: 30
