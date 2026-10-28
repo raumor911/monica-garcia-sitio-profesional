@@ -47,7 +47,7 @@ check(home.includes('href="como-puedo-ayudarte/"')&&home.includes('href="perspec
 const knowledge=JSON.parse(await read("knowledge/monica-garcia.json"));
 check(knowledge.verified_externally===false,"Evitar afirmar verificación externa de métricas");
 check(Array.isArray(knowledge.unconfirmed)&&knowledge.unconfirmed.some(x=>x.includes("universidad")),"Registrar discrepancia académica");
-check((await read("llms.txt")).includes("no se presenta como Product Owner"),"Aclarar transición en llms.txt");
+check((await read("llms.txt")).toLowerCase().includes("no se presenta como product owner"),"Aclarar transición en llms.txt");
 for(const p of localFiles){try{await stat(join(root,p));}catch{errors.push(`Falta recurso ${p}`);}}
 
 if(errors.length===0){
