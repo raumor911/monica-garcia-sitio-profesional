@@ -71,7 +71,7 @@ function prepareHtml(raw,route) {
 }
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
-for (const item of ["styles.css","seo-pages.css","app.js","cv.html","llms-full.txt"]) {
+for (const item of ["styles.css","seo-pages.css","premium-motion.css","app.js","premium-motion.js","cv.html","llms-full.txt"]) {
   await copyFile(join(root,item),join(out,item));
 }
 await cp(join(root,"assets"),join(out,"assets"),{recursive:true});
