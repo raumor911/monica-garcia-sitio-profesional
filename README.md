@@ -30,7 +30,7 @@ Todas las acciones de contacto directo se configuran desde `app.js` y apuntan a:
 
 Hay mensajes distintos para oportunidades laborales, solicitud de CV y conversación sobre el dashboard. No se ha integrado un formulario, WhatsApp Business API, bot ni seguimiento de conversiones. No se almacena información personal del visitante.
 
-El botón **Ver mi CV** abre `cv.html`, una versión HTML imprimible del resumen profesional, con opción de guardar como PDF desde el navegador. No se publica el PDF original proporcionado porque hay una discrepancia académica por verificar; la versión HTML omite el nombre de la universidad hasta confirmarlo.
+La portada muestra únicamente el botón **Hablemos por WhatsApp**. `cv.html` permanece como documento HTML imprimible, accesible desde enlaces internos existentes, pero sin botón de CV en la portada. No se publica el PDF original porque existen datos académicos pendientes de verificar.
 
 ## Criterios editoriales y pendientes antes de publicar
 
@@ -81,7 +81,7 @@ La sección **Mi trayectoria** ahora muestra cinco experiencias en una sola lín
 
 ## Hero según mockup aprobado
 
-La portada utiliza el encabezado en dos líneas **«OPERACIONES HOY, / MEJORES PRODUCTOS MAÑANA»**, el nombre en dos renglones, la especialidad **Product Operations & Client Experience**, la descripción de su propuesta de valor y los dos CTA del mockup. El botón **Hablemos por WhatsApp** conserva el contacto configurado; **Ver mi CV** abre la versión HTML imprimible y no redirige a WhatsApp porque no busca iniciar una conversación. La disponibilidad distingue **México / Remoto** de **Abierta a oportunidades en México y equipos internacionales**.
+La portada utiliza el encabezado en dos líneas **«OPERACIONES HOY, / MEJORES PRODUCTOS MAÑANA»**, el nombre en dos renglones, la especialidad **Product Operations & Client Experience**, la descripción de su propuesta de valor y un único CTA principal: **Hablemos por WhatsApp**. El botón para ver el CV se retiró de la portada por decisión editorial; el contacto conserva su número configurado. La disponibilidad distingue **México / Remoto** de **Abierta a oportunidades en México y equipos internacionales**.
 
 El formato del CV en `cv.html` no reclama experiencia formal previa como Product Owner y evita publicar una universidad todavía no confirmada. Se puede imprimir o guardar como PDF con el botón correspondiente.
 
