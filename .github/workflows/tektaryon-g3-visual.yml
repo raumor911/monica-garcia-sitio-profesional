@@ -14,6 +14,9 @@ on:
       - "perspectiva/**"
       - "assets/**"
       - "telemetry/client.js"
+      - "premium-motion.js"
+      - "premium-motion.css"
+      - "scripts/qa-premium-motion.mjs"
 
 permissions:
   contents: read
@@ -40,6 +43,9 @@ jobs:
       - name: TEK-03 — capture and inspect all six widths
         id: visual
         run: node scripts/qa-visual.mjs
+      - name: TEK-03 — premium motion, pause and reduced-motion regression
+        if: always()
+        run: node scripts/qa-premium-motion.mjs
       - name: Upload screenshots and QA evidence
         if: always()
         uses: actions/upload-artifact@v4
